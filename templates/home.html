@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block content %}
+<div>
+  <form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+        {{ form.weight1.label(class="form-control-label font-weight-bold form-control-md") }} 
+        <ul class="form-group navbar list-unstyled">
+            <li>
+                <div class="form-group"> 
+                    {% if form.weight1.errors %}
+                        {{ form.weight1(class="form-control form-control-sm is-invalid",placeholder="Item 1") }} 
+                        <div class="invalid-feedback">
+                            {% for error in form.weight1.errors %}
+                                <span> {{ error }}</span>
+                            {% endfor%}
+                        </div>
+                        {% else %}
+                        {{ form.weight1(class="form-control form-control-sm",placeholder="Item 1") }} 
+                    {% endif %}
+                </div>
+            </li>
+            <li>
+                <div class="form-group"> 
+                    {% if form.weight2.errors %}
+                        {{ form.weight2(class="form-control form-control-sm is-invalid",placeholder="Item 2") }} 
+                        <div class="invalid-feedback">
+                            {% for error in form.weight2.errors %}
+                                <span> {{ error }}</span>
+                            {% endfor%}
+                        </div>
+                        {% else %}
+                        {{ form.weight2(class="form-control form-control-sm",placeholder="Item 2") }} 
+                    {% endif %}
+                </div>
+            </li>
+            <li>
+                <div class="form-group"> 
+                    {% if form.weight3.errors %}
+                        {{ form.weight3(class="form-control form-control-sm is-invalid",placeholder="Item 3") }} 
+                        <div class="invalid-feedback">
+                            {% for error in form.weight3.errors %}
+                                <span> {{ error }}</span>
+                            {% endfor%}
+                        </div>
+                        {% else %}
+                        {{ form.weight3(class="form-control form-control-sm",placeholder="Item 3") }} 
+                    {% endif %}
+                </div>
+            </li>
+            <li>
+                <div class="form-group"> 
+                    {% if form.weight4.errors %}
+                        {{ form.weight4(class="form-control form-control-sm is-invalid",placeholder="Item 4") }} 
+                        <div class="invalid-feedback">
+                            {% for error in form.weight4.errors %}
+                                <span> {{ error }}</span>
+                            {% endfor%}
+                        </div>
+                        {% else %}
+                        {{ form.weight4(class="form-control form-control-sm",placeholder="Item 4") }} 
+                    {% endif %}
+                </div>
+            </li>
+        </ul>
+        {{ form.value1.label(class="form-control-label font-weight-bold form-control-md") }}
+        <ul class="form-group navbar list-unstyled">
+            <li>
+                <div class="form-group"> 
+                    {% if form.value1.errors %}
+                        {{ form.value1(class="form-control form-control-sm is-invalid",placeholder="Item 1") }} 
+                        <div class="invalid-feedback">
+                            {% for error in form.value1.errors %}
+                                <span> {{ error }}</span>
+                            {% endfor%}
+                        </div>
+                        {% else %}
+                        {{ form.value1(class="form-control form-control-sm",placeholder="Item 1") }} 
+                    {% endif %}
+                </div>
+            </li>
+            <li>
+                <div class="form-group"> 
+                    {% if form.value2.errors %}
+                        {{ form.value2(class="form-control form-control-sm is-invalid",placeholder="Item 2") }} 
+                        <div class="invalid-feedback">
+                            {% for error in form.value2.errors %}
+                                <span> {{ error }}</span>
+                            {% endfor%}
+                        </div>
+                        {% else %}
+                        {{ form.value2(class="form-control form-control-sm",placeholder="Item 2") }} 
+                    {% endif %}
+                </div>
+            </li>
+            <li>
+                <div class="form-group"> 
+                    {% if form.value3.errors %}
+                        {{ form.value3(class="form-control form-control-sm is-invalid",placeholder="Item 3") }} 
+                        <div class="invalid-feedback">
+                            {% for error in form.value3.errors %}
+                                <span> {{ error }}</span>
+                            {% endfor%}
+                        </div>
+                        {% else %}
+                        {{ form.value3(class="form-control form-control-sm",placeholder="Item 3") }} 
+                    {% endif %}
+                </div>
+            </li>
+            <li>
+                <div class="form-group"> 
+                    {% if form.value4.errors %}
+                        {{ form.value4(class="form-control form-control-sm is-invalid",placeholder="Item 4") }} 
+                        <div class="invalid-feedback">
+                            {% for error in form.value4.errors %}
+                                <span> {{ error }}</span>
+                            {% endfor%}
+                        </div>
+                        {% else %}
+                        {{ form.value4(class="form-control form-control-sm",placeholder="Item 4") }} 
+                    {% endif %}
+                </div>
+            </li>
+        </ul>
+        <div class="form-group">
+            {{ form.knapsack_value.label(class="form-control-label font-weight-bold form-control-md") }}
+            <div class="form-group"> 
+                {% if form.knapsack_value.errors %}
+                    {{ form.knapsack_value(class="form-control form-control-sm is-invalid",placeholder="Net Weight") }} 
+                    <div class="invalid-feedback">
+                        {% for error in form.knapsack_value.errors %}
+                            <span> {{ error }}</span>
+                        {% endfor%}
+                    </div>
+                    {% else %}
+                    {{ form.knapsack_value(class="form-control form-control-sm",placeholder="Net Weight") }} 
+                {% endif %}
+            </div>
+        </div>
+        <!-- Default checked -->
+        <div class="custom-control custom-switch" data-toggle="collapse" data-target="#advance">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Advanced</label>
+        </div>
+        <hr>
+        <ul class="form-group navbar list-unstyled collapse" id="advance">
+            <div class="container">
+                <li class="navbar">
+                    {{ form.generation_count.label(class="form-control-label form-control-sm") }} 
+                    <div class="form-group"> 
+                        {% if form.generation_count.errors %}
+                            {{ form.generation_count(class="form-control form-control-sm is-invalid",placeholder="50") }} 
+                            <div class="invalid-feedback">
+                                {% for error in form.generation_count.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor%}
+                            </div>
+                            {% else %}
+                            {{ form.generation_count(class="form-control form-control-sm",placeholder="50") }} 
+                        {% endif %}
+                    </div>
+                </li>
+                <li class="navbar">
+                    {{ form.gene_count.label(class="form-control-label form-control-sm") }} 
+                    <div class="form-group"> 
+                        {% if form.gene_count.errors %}
+                            {{ form.gene_count(class="form-control form-control-sm is-invalid",placeholder="8") }} 
+                            <div class="invalid-feedback">
+                                {% for error in form.gene_count.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor%}
+                            </div>
+                            {% else %}
+                            {{ form.gene_count(class="form-control form-control-sm",placeholder="8") }} 
+                        {% endif %}
+                    </div>
+                </li>
+            </div>
+            <div class="container">
+                <li class="navbar">
+                    {{ form.mutation_rate.label(class="form-control-label form-control-sm") }} 
+                    <div class="form-group"> 
+                        {% if form.mutation_rate.errors %}
+                            {{ form.mutation_rate(class="form-control form-control-sm is-invalid",placeholder="0.4") }} 
+                            <div class="invalid-feedback">
+                                {% for error in form.mutation_rate.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor%}
+                            </div>
+                            {% else %}
+                            {{ form.mutation_rate(class="form-control form-control-sm",placeholder="0.4") }} 
+                        {% endif %}
+                    </div>
+                </li>
+                <li class="navbar">
+                    {{ form.crossover_rate.label(class="form-control-label form-control-sm") }} 
+                    <div class="form-group"> 
+                        {% if form.crossover_rate.errors %}
+                            {{ form.crossover_rate(class="form-control form-control-sm is-invalid",placeholder="=0.8") }} 
+                            <div class="invalid-feedback">
+                                {% for error in form.crossover_rate.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor%}
+                            </div>
+                            {% else %}
+                            {{ form.crossover_rate(class="form-control form-control-sm",placeholder="0.8") }} 
+                        {% endif %}
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </fieldset>
+    <div class="container text-center">
+        <div class="text-center py-4 d-inline-block px-5">
+            <a href="{{ url_for('home') }}" class="btn btn-outline-info">Reset</a>
+        </div>
+        <div class="text-center d-inline-block px-5">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
