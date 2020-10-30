@@ -1,0 +1,24 @@
+body {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+    /* height: 1vh; */
+}
+
+::placeholder {
+    font-style: italic;
+}
+
+.fa-fire-alt {
+    color: #0388fc;
+}
+
+.fa-heart {
+    color:rgb(204, 17, 17);
+}
+
+#main-heading {
+    color: #0388fc;
+    border-bottom: 1px solid #777 ;
+}
