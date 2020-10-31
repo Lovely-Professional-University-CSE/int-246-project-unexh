@@ -146,9 +146,9 @@
         <hr>
         <ul class="form-group navbar list-unstyled collapse" id="advance">
             <div class="container">
-                <li class="navbar">
-                    {{ form.generation_count.label(class="form-control-label form-control-sm") }} 
+                <li>
                     <div class="form-group"> 
+                        {{ form.generation_count.label(class="form-control-label form-control-sm") }}
                         {% if form.generation_count.errors %}
                             {{ form.generation_count(class="form-control form-control-sm is-invalid",placeholder="50") }} 
                             <div class="invalid-feedback">
@@ -161,9 +161,9 @@
                         {% endif %}
                     </div>
                 </li>
-                <li class="navbar">
-                    {{ form.gene_count.label(class="form-control-label form-control-sm") }} 
+                <li>
                     <div class="form-group"> 
+                        {{ form.gene_count.label(class="form-control-label form-control-sm") }} 
                         {% if form.gene_count.errors %}
                             {{ form.gene_count(class="form-control form-control-sm is-invalid",placeholder="8") }} 
                             <div class="invalid-feedback">
@@ -176,11 +176,9 @@
                         {% endif %}
                     </div>
                 </li>
-            </div>
-            <div class="container">
-                <li class="navbar">
-                    {{ form.mutation_rate.label(class="form-control-label form-control-sm") }} 
+                <li>
                     <div class="form-group"> 
+                        {{ form.mutation_rate.label(class="form-control-label form-control-sm") }} 
                         {% if form.mutation_rate.errors %}
                             {{ form.mutation_rate(class="form-control form-control-sm is-invalid",placeholder="0.4") }} 
                             <div class="invalid-feedback">
@@ -193,9 +191,9 @@
                         {% endif %}
                     </div>
                 </li>
-                <li class="navbar">
-                    {{ form.crossover_rate.label(class="form-control-label form-control-sm") }} 
+                <li>
                     <div class="form-group"> 
+                        {{ form.crossover_rate.label(class="form-control-label form-control-sm") }} 
                         {% if form.crossover_rate.errors %}
                             {{ form.crossover_rate(class="form-control form-control-sm is-invalid",placeholder="=0.8") }} 
                             <div class="invalid-feedback">
