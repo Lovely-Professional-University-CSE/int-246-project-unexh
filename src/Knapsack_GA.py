@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import random as rd
 from random import randint
 import matplotlib.pyplot as plt
@@ -128,7 +127,7 @@ class Knapsack_Class_GA:
     def get_graph(self):
         fitness_history_mean = [np.mean(fitness) for fitness in self.fitness_history]
         fitness_history_max = [np.max(fitness) for fitness in self.fitness_history]
-        fig = plt.figure(1)
+        fig = plt.figure()
         plt.plot(list(range(self.num_generations)), fitness_history_mean, label = 'Mean Fitness')
         plt.plot(list(range(self.num_generations)), fitness_history_max, label = 'Max Fitness')
         plt.legend()
